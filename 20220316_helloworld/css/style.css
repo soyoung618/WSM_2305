@@ -2,39 +2,44 @@
 /* 우선순위: class < id <<< !important */
 /* 우선순위: 같은 급일 때, 위 < 아래 코드 */
 body {
-    color: gray;
+  color: gray;
+  /* background-color: greenyellow; */
 }
 body > ul > li {
-    color: green;
+  color: green;
 }
-body li, h6 {
-    /* >: 자식, 띄어쓰기: 자손 */
-    color: teal;
+body li,
+h6 {
+  /* >: 자식, 띄어쓰기: 자손 */
+  color: teal;
 }
 #leader {
-    color: gold;
+  color: gold;
 }
 .korea {
-    color:crimson !important;
+  color: crimson !important;
 }
 .incheon {
-    color: darkblue;
+  color: darkblue;
 }
-h1+h2 {
-    /* 마주하는 첫째 자매 */
-    background-color: skyblue;
+h1 + h2 {
+  /* 마주하는 첫째 자매 */
+  background-color: skyblue;
 }
-h2~h3 {
-    /* 마주하는 모든 자매 */
-    background-color: aqua;
+h2 ~ h3 {
+  /* 마주하는 모든 자매 */
+  background-color: aqua;
 }
 body > ul > ul:nth-child(4) > li:nth-child(2) {
-    /* nth-child(n): n번째 자식 */
-    /* first-child: 첫째 */
-    /* last-child: 막내 */
-    text-decoration: underline;
+  /* nth-child(n): n번째 자식 */
+  /* first-child: 첫째 */
+  /* last-child: 막내 */
+  text-decoration: underline;
 }
 [type="password"] {
-    /* HTML 태그 속성="값" */
-    background-color: chocolate;
+  /* HTML 태그 속성="값" */
+  background-color: chocolate;
+}
+body > ul > ul:nth-child(4) {
+  background-color: greenyellow;
 }
