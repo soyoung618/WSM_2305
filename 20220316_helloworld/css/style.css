@@ -28,8 +28,10 @@ h2~h3 {
     /* 마주하는 모든 자매 */
     background-color: aqua;
 }
-li:nth-child(2) {
-    /* n번째 자식 */
+body > ul > ul:nth-child(4) > li:nth-child(2) {
+    /* nth-child(n): n번째 자식 */
+    /* first-child: 첫째 */
+    /* last-child: 막내 */
     text-decoration: underline;
 }
 [type="password"] {
