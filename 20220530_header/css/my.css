@@ -1,0 +1,12 @@
+.nav-list {
+    justify-content: flex-end;
+    /* flex-wrap: wrap; */
+}
+.nav-list li {
+    flex-basis: 200px;  /* 기본 크기 설정 기본값:auto */
+    flex-shrink: 0; /* 줄이기 가능? 1 기본값:1 */
+    flex-grow: 1;   /* 늘이기 가능? 1 기본값:0 */
+    flex: 0 1 auto;    /* flex-grow flex-shrink flex-basis */
+    /* border: 픽셀 solid 색깔 */
+}
+
