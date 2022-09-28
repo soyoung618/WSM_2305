@@ -27,6 +27,7 @@ const setCalender =(year,month)=>{
     setTitle(year,month);
 
     const dateGridContainerDiv = document.getElementsByClassName("date-grid-container")[0];
+    dateGridContainerDiv.innerHTML="";   //초기화
     //1~akfdlfRkwl gird-item 만들자
     for (let i=1; i<=lastDate;i++){
         //요소 만들자
@@ -43,7 +44,6 @@ const setCalender =(year,month)=>{
     let firstDateDiv =dateGridContainerDiv.getElementsByClassName("grid-item")[0];
     firstDateDiv.style.gridColumnStart = firsDay+1;
 }
-year=1980;
-month=3;
+
 setCalender(year,month);
 
