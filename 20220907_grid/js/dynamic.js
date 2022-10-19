@@ -82,6 +82,11 @@ const initButton =() =>{
 initButton();
 
 //급식 API,AJAX 급식 데이터 가져오자
+//.date-grid-container > .grid-item에 mouseover 이벤트 발생하면, handler로 지정하자
+//handler에서 year, month, date 정보를 가져와서 url 생성하자
+// AJAX로 url 호출하자(Asynchronous JavaScript And XML)
+//응답오면, #breakfast, #lunch, #dinner에 출력하자
+
 const KEY ="647f10f7da8f4fe0b91784fe21705d3c";
 console.log(KEY);
 const ATPT_OFCDC_SC_CODE="B10";  //서울 특별시 교육청
@@ -96,4 +101,7 @@ url += `&SD_SCHUL_CODE=${SD_SCHUL_CODE}`;
 url += `&MLSV_YMD=${MLSV_YMD}`;
 url += `&MMEAL_SC_CODE=${MMEAL_SC_CODE}`;
 console.log(url);
+
+
+
 
