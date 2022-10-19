@@ -81,3 +81,19 @@ const initButton =() =>{
 }
 initButton();
 
+//급식 API,AJAX 급식 데이터 가져오자
+const KEY ="647f10f7da8f4fe0b91784fe21705d3c";
+console.log(KEY);
+const ATPT_OFCDC_SC_CODE="B10";  //서울 특별시 교육청
+const SD_SCHUL_CODE="7010569";  //미림여자정보과학고등학교
+const MLSV_YMD="20221019";  //2022년10월19일
+const MMEAL_SC_CODE=3;  //중식
+let url=`https://open.neis.go.kr/hub/mealServiceDietInfo`;
+url += `?KEY=${KEY}`;
+url += `&Type=json`;
+url += `&ATPT_OFCDC_SC_CODE=${ATPT_OFCDC_SC_CODE}`;
+url += `&SD_SCHUL_CODE=${SD_SCHUL_CODE}`;
+url += `&MLSV_YMD=${MLSV_YMD}`;
+url += `&MMEAL_SC_CODE=${MMEAL_SC_CODE}`;
+console.log(url);
+
