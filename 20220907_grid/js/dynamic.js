@@ -104,10 +104,24 @@ const handler = (event) => {
 // AJAX로 url 호출하자(Asynchronous JavaScript And XML)
 const getMenuByAPI =(url) => {
     //XMLHttpRequest 만들자
-    //요펑을 보낼 방식, url, 비동기여부 설정하기
-    //요청 전송
+    let xhr = new XMLHttpRequest();
+
     //callback
-    
+    xhr.onreadystatechange=()=>{
+        if(xhr.readyState ==XMLHttpRequest.DONE && xhr.status == 200){
+            console.log("성공");
+            console.log(xhr.response);
+        }else{
+        
+        }
+    }
+
+    //요펑을 보낼 방식, url, 비동기여부 설정하기
+    xhr.open("GET",url,true);
+
+    //요청 전송
+    xhr.send();
+
 }
 //응답오면, #breakfast, #lunch, #dinner에 출력하자
 
