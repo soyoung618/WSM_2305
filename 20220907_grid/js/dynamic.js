@@ -83,24 +83,41 @@ initButton();
 
 //급식 API,AJAX 급식 데이터 가져오자
 //.date-grid-container > .grid-item에 mouseover 이벤트 발생하면, handler로 지정하자
-//handler에서 year, month, date 정보를 가져와서 url 생성하자
+const handler = (event) => {
+    //handler에서 year, month, date 정보를 가져와서 url 생성하자
+    let date=event.target.innerHTML;
+    const KEY ="647f10f7da8f4fe0b91784fe21705d3c";
+    console.log(KEY);
+    const ATPT_OFCDC_SC_CODE="B10";  //서울 특별시 교육청
+    const SD_SCHUL_CODE="7010569";  //미림여자정보과학고등학교
+    const MLSV_YMD= `${year}${month.toString()}${date.padStart(2,"0")} `; 
+    let url=`https://open.neis.go.kr/hub/mealServiceDietInfo`;
+    url += `?KEY=${KEY}`;
+    url += `&Type=json`;
+    url += `&ATPT_OFCDC_SC_CODE=${ATPT_OFCDC_SC_CODE}`;
+    url += `&SD_SCHUL_CODE=${SD_SCHUL_CODE}`;
+    url += `&MLSV_YMD=${MLSV_YMD}`;
+    console.log(url);
+    getMenuByAPI(url); //AJAX로 호출
+    
+}
 // AJAX로 url 호출하자(Asynchronous JavaScript And XML)
+const getMenuByAPI =(url) => {
+    //XMLHttpRequest 만들자
+    //요펑을 보낼 방식, url, 비동기여부 설정하기
+    //요청 전송
+    //callback
+    
+}
 //응답오면, #breakfast, #lunch, #dinner에 출력하자
 
-const KEY ="647f10f7da8f4fe0b91784fe21705d3c";
-console.log(KEY);
-const ATPT_OFCDC_SC_CODE="B10";  //서울 특별시 교육청
-const SD_SCHUL_CODE="7010569";  //미림여자정보과학고등학교
-const MLSV_YMD="20221019";  //2022년10월19일
-const MMEAL_SC_CODE=3;  //중식
-let url=`https://open.neis.go.kr/hub/mealServiceDietInfo`;
-url += `?KEY=${KEY}`;
-url += `&Type=json`;
-url += `&ATPT_OFCDC_SC_CODE=${ATPT_OFCDC_SC_CODE}`;
-url += `&SD_SCHUL_CODE=${SD_SCHUL_CODE}`;
-url += `&MLSV_YMD=${MLSV_YMD}`;
-url += `&MMEAL_SC_CODE=${MMEAL_SC_CODE}`;
-console.log(url);
+let dateGridContainerDiv = document.getElementsByClassName("date-grid-container")[0];
+let gridItems = dateGridContainerDiv.getElementsByClassName("grid-item");
+for (let gridItem of gridItems){
+    //console.log(gridItem);
+    gridItem.onclick = handler;
+} 
+
 
 
 
