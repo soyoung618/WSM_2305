@@ -147,17 +147,18 @@ const showMenu = (jsonString) =>{
     }catch{
     }
     //조식, 중식, 서식 -> html
+    //응답오면, #breakfast, #lunch, #dinner에 출력하자
     breakfast.innerHTML = breakfastMenu;
     lunch.innerHTML = lunchMenu;
     dinner.innerHTML = dinnerMenu;
 }
-//응답오면, #breakfast, #lunch, #dinner에 출력하자
 
 let dateGridContainerDiv = document.getElementsByClassName("date-grid-container")[0];
 let gridItems = dateGridContainerDiv.getElementsByClassName("grid-item");
 for (let gridItem of gridItems){
     //console.log(gridItem);
-    gridItem.onclick = handler;
+    gridItem.onmouseover=handler; //onmouseover일때, 이벤트 처리 하자
+    
 } 
 
 
