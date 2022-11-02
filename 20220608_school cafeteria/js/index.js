@@ -81,10 +81,10 @@ const showMenu = (json) => {
   //(5.6.) 삭제
   //조식, 중식, 서식 -> html
   //응답오면, #breakfast, #lunch, #dinner에 출력하자
-  let menus =document.querySelectorAll(".card-menu");
-  let breakfast =menus[0];
-  let lunch =menus[1];
-  let dinner =menus[2];
+  let menus = document.querySelectorAll(".card-menu");
+  let breakfast = menus[0];
+  let lunch = menus[1];
+  let dinner = menus[2];
   breakfast.innerHTML = breakfastMenu;
   lunch.innerHTML = lunchMenu;
   dinner.innerHTML = dinnerMenu;
