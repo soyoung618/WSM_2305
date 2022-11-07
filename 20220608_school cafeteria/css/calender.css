@@ -3,6 +3,7 @@ main{
     column-gap: 40px;
     flex-wrap: wrap;
     margin-top: 20px;
+    margin-top: 20px;
 }
 .flex-container{
     display: flex;
